@@ -2,15 +2,13 @@
 #include <tclap/CmdLine.h>
 #include "SubSystem\Emulator.hpp"
 
-
 int main(int argc, char** argv)
 {
 	bool isDebug = false;
 	std::string strFileName;
 
 	//Parsing Command line arguments
-	try{
-
+	try {
 		TCLAP::CmdLine cmd("Chip-8 emulator", ' ', "0.0.1a");
 		TCLAP::UnlabeledValueArg<std::string> fileArg("file", "Patch to executable Chip-8 file", true, "", "path_to_file", cmd);
 		TCLAP::SwitchArg dbgArg("d", "debug", "Display debug information about running program", cmd);
@@ -19,8 +17,8 @@ int main(int argc, char** argv)
 
 		strFileName = fileArg.getValue();
 		isDebug = dbgArg.getValue();
-
-	}catch (TCLAP::ArgException &e){
+	}
+	catch (TCLAP::ArgException &e) {
 		std::cerr << "Exception while parsing args: " << e.error() << " for arg " << e.argId() << std::endl;
 		return 1;
 	}
@@ -28,7 +26,7 @@ int main(int argc, char** argv)
 	FILE* progFile;
 	fopen_s(&progFile, strFileName.c_str(), "rb");
 
-	if (progFile == NULL){
+	if (progFile == NULL) {
 		std::cerr << "Cannot open file!" << std::endl;
 		return 2;
 	}
@@ -55,5 +53,4 @@ int main(int argc, char** argv)
 	// terminate
 	fclose(progFile);
 	free(buffer);
-	
 }
