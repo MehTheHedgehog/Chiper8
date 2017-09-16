@@ -1,29 +1,32 @@
 #include <string>
 #include <tclap/CmdLine.h>
-#include "SubSystem\Emulator.hpp"
+#include "SubSystem\SubSystem.hpp"
 
 int main(int argc, char** argv)
 {
-	bool isDebug = false;
-	std::string strFileName;
+
+	TCLAP::CmdLine cmd("Chiper8 emulator", ' ', "0.0.1a");
+	TCLAP::UnlabeledValueArg<std::string> fileArg("file", "Patch to executable Chip-8 file", true, "", "path_to_file", cmd);
+	TCLAP::SwitchArg dbgArg("d", "debug", "Display debug information about running program", cmd);
 
 	//Parsing Command line arguments
-	try {
-		TCLAP::CmdLine cmd("Chip-8 emulator", ' ', "0.0.1a");
-		TCLAP::UnlabeledValueArg<std::string> fileArg("file", "Patch to executable Chip-8 file", true, "", "path_to_file", cmd);
-		TCLAP::SwitchArg dbgArg("d", "debug", "Display debug information about running program", cmd);
+	cmd.parse(argc, argv);
 
-		cmd.parse(argc, argv);
+	const bool isDebug = dbgArg.getValue();
+	const std::string filename = fileArg.getValue();
 
-		strFileName = fileArg.getValue();
-		isDebug = dbgArg.getValue();
+	
+	/*try {
+		
 	}
 	catch (TCLAP::ArgException &e) {
 		std::cerr << "Exception while parsing args: " << e.error() << " for arg " << e.argId() << std::endl;
 		return 1;
-	}
+	}*/
 
-	FILE* progFile;
+
+
+	/*FILE* progFile;
 	fopen_s(&progFile, strFileName.c_str(), "rb");
 
 	if (progFile == NULL) {
@@ -52,5 +55,5 @@ int main(int argc, char** argv)
 
 	// terminate
 	fclose(progFile);
-	free(buffer);
+	free(buffer);*/
 }

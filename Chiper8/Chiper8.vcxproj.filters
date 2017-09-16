@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\SubSystem-dep\Emulator.cpp">
+      <Filter>src\SubSystem-dep</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="test\tests.cpp" />
+    <ClCompile Include="test\tests.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\SubSystem\SubSystem.cpp">
+      <Filter>test\SubSystem</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="test">
+      <UniqueIdentifier>{24119bdc-91ad-4a7f-b0e3-336eb874044c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\SubSystem">
+      <UniqueIdentifier>{cf8fbe54-0eb4-4e7f-b20b-fb44eb692a8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\Utils">
+      <UniqueIdentifier>{4335cbbb-45d0-4858-89e6-fd86b91fafb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{5901f64e-2bf7-40a5-a769-d70860b6f9b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\SubSystem">
+      <UniqueIdentifier>{27684623-741c-46ce-ba09-cebcf726d2ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\SubSystem\CPU">
+      <UniqueIdentifier>{56731f34-63c6-415a-becb-60baa435366a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\SubSystem\RAM">
+      <UniqueIdentifier>{6117bb79-b0b8-4b3c-bcb9-7dd0dd018f08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\SubSystem\GPU">
+      <UniqueIdentifier>{cfe550f9-6958-4881-815b-fd7d459514b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\SubSystem-dep">
+      <UniqueIdentifier>{faaa574d-4711-427f-ad44-c3d5dd2ea99a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Utils">
+      <UniqueIdentifier>{57405587-071f-4d8b-9450-0e7ff0ebc8dd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\SubSystem-dep\Emulator.hpp">
+      <Filter>src\SubSystem-dep</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SubSystem-dep\HWException.hpp">
+      <Filter>src\SubSystem-dep</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SubSystem\SubSystem.hpp">
+      <Filter>src\SubSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Util\binaryFile.hpp">
+      <Filter>src\Utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
