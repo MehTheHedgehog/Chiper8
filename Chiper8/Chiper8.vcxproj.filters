@@ -7,12 +7,14 @@
     <ClCompile Include="src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="test\tests.cpp" />
     <ClCompile Include="test\tests.cpp">
       <Filter>test</Filter>
     </ClCompile>
     <ClCompile Include="test\SubSystem\SubSystem.cpp">
       <Filter>test\SubSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="test\tests.cpp">
+      <Filter>test</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
