@@ -20,7 +20,7 @@
     <ClInclude Include="src\SubSystem-dep\Emulator.hpp" />
     <ClInclude Include="src\SubSystem-dep\HWException.hpp" />
     <ClInclude Include="src\SubSystem\SubSystem.hpp" />
-    <ClInclude Include="src\Util\binaryFile.hpp" />
+    <ClInclude Include="src\Utils\binaryFile.hpp" />
     <ClInclude Include="src\Utils\bit.hpp" />
     <ClInclude Include="src\Utils\byte.hpp" />
   </ItemGroup>

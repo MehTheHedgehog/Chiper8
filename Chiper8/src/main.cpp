@@ -1,6 +1,10 @@
+#ifndef _DEBUG
+
 #include <string>
 #include <tclap/CmdLine.h>
 #include "SubSystem\SubSystem.hpp"
+#include "Utils\binaryFile.hpp"
+
 
 int main(int argc, char** argv)
 {
@@ -15,13 +19,19 @@ int main(int argc, char** argv)
 	const bool isDebug = dbgArg.getValue();
 	const std::string filename = fileArg.getValue();
 
-	
+	/*std::ifstream file(filename, std::ios_base::in | std::ios_base::binary);
+
+	if (!file.is_open()) {
+		std::cerr << "Cannot open file: " << file.pa << " for arg " << e.argId() << std::endl;
+	}*/
+
+
 	/*try {
-		
+
 	}
 	catch (TCLAP::ArgException &e) {
-		std::cerr << "Exception while parsing args: " << e.error() << " for arg " << e.argId() << std::endl;
-		return 1;
+	std::cerr << "Exception while parsing args: " << e.error() << " for arg " << e.argId() << std::endl;
+	return 1;
 	}*/
 
 
@@ -30,13 +40,13 @@ int main(int argc, char** argv)
 	fopen_s(&progFile, strFileName.c_str(), "rb");
 
 	if (progFile == NULL) {
-		std::cerr << "Cannot open file!" << std::endl;
-		return 2;
+	std::cerr << "Cannot open file!" << std::endl;
+	return 2;
 	}
 
 	fseek(progFile, 0, SEEK_END);
 	if (ftell(progFile) > 0xFFF - 0x200)
-		return 3;
+	return 3;
 
 	unsigned char* buffer;
 	unsigned __int8 byteSize = ftell(progFile);
@@ -57,3 +67,5 @@ int main(int argc, char** argv)
 	fclose(progFile);
 	free(buffer);*/
 }
+
+#endif // !_DEBUG
