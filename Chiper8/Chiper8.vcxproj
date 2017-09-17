@@ -21,6 +21,8 @@
     <ClInclude Include="src\SubSystem-dep\HWException.hpp" />
     <ClInclude Include="src\SubSystem\SubSystem.hpp" />
     <ClInclude Include="src\Util\binaryFile.hpp" />
+    <ClInclude Include="src\Utils\bit.hpp" />
+    <ClInclude Include="src\Utils\byte.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{88466A26-73BB-48CF-9C0F-B5D70461B238}</ProjectGuid>
